@@ -46,7 +46,25 @@ If you're staying at a cheap hotel, you might encounter a sight like the one in 
 
 <img width="487" alt="image" src="https://user-images.githubusercontent.com/66931789/187051110-fb62a300-63f1-4620-8892-d5bb7aeee5c8.png">
 
-What happens when the hair dryer stops working?
+What happens when the hair dryer stops working? The hotel has to call in a skilled professional. To fix the hardwired hair dryer, the power to the room will have to be cut, rendering it temporarily useless. Then, the technician must use special tools to disconnect the hair dryer and replace ti with a new one. If you're lucky, the technician will remember to turn the power on to the room back on and go back to test whether the new hair dryer works -if you're lucky. Does this procedure sound at all familiar? 
+This is how you would approach working with tightly coupled code. In this scenario, the hair dryer is tightly coupled to the wall, and you can't easily modify one without impacting the other. 
+
+## Comparing Electrical Wiring to Design Patterns
+Usually , we don't wire electrical applicances together by attaching the cable directly to the wall. Instead, we use plugs and sockets. A socket DEFINES A SHAPE THAT THE PLUG MUST MATCH.
+
+In an analogy to software design, the socket is an interface, and the plug with its appliance is an implementation. This means that the room (the application) has one or (hopefully) more sockets, and the users of the room (the developers) can plug in appliances as they please, potentially even a customer-supplied hair dryer. 
+
+<img width="697" alt="image" src="https://user-images.githubusercontent.com/66931789/187051248-c29c2692-8223-4cfb-9a6d-f7f998aed6a2.png">
+
+In contrast to the hardwired hair dryer, plugs and socks define a loosely coupled model for connecting electrical appliances. As long as the plug (the implementation) fits into the socket (implements the interface), and it can handle the amount of volts and hertz (obeys the interface contract), we can combine appliances in a variety of ways, What's particularly interesting is that many of these common combinations can be compared to well-known software design principles and patterns. 
+
+## Liskov Substitution Principle
+It's amazing that the concept of a socket predates computers by decades, and yet it provides an essential service to computers. The original designers of sockets couldn't possibly have foreseen personal computers, but because the design is so versatile, needs that were originally unanticipated can be met. 
+
+The ability to switch plugs, or implementations, without requiring a change to the socket, or interface, is similar to a central software design principle called the LISKOV SUBSTITUTION PRINCIPLE. This principle states that we should be able to replace one implementation of an interface with another without breaking either the client or the implementation. 
+When it comes to DI, the LISKOV SUBSTITUTION PRINCIPLE is one of the most important software design principles. It's this principle that enables us to address requirements that occur in the future, even if we can't foresee them today. 
+
+
 
 
 
