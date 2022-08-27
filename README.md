@@ -38,5 +38,15 @@ A SERVICE LOCATOR is often called an Abstract Factory on steroids because, compa
 Closely associated with the previous misconception is the notion that DI requires a DI CONTAINER. If you held the previous, mistaken belief that DI involves a SERVICE LOCATOR, then it's easy to conclude that a DI CONTAINER can take on the responsibility of the SERVICE LOCATOR. This might be the case, but its not all how you should use a DI CONTAINER. 
 A DI CONTAINER is an 'optional' library that makes it easier to compose classes when you wire up an application, but it's in no way required. When you compose applications without a DI CONTAINER, it's called PURE DI. It might take a little more work, but other than that, you don't have to compromise on any DI principles. 
 
+## Understandig the purpose of DI
+DI isn't and end goal it's a means to an end. DI enables loose coupling, and loose coupling makes code more maintainable.
+
+## Checking into a cheap hotel
+If you're staying at a cheap hotel, you might encounter a sight like the one in the next figure. Here, the hotel has kindly provided a hair dryer for your convenience, but apparently they don't trust you to leave the hair dryer for the next guest: the appliance is directly attached to the wall outlet. The hotel management decided that the cost of replacing stolen hair dryers is high enough to justify what's otherwise an obviously inferior implementation. 
+
+<img width="487" alt="image" src="https://user-images.githubusercontent.com/66931789/187051110-fb62a300-63f1-4620-8892-d5bb7aeee5c8.png">
+
+What happens when the hair dryer stops working?
+
 
 
