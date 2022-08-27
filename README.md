@@ -22,3 +22,21 @@ Unless you only write prototypes, or applications that never make it past their 
 An excellent way to make code more maintainable is through LOOSE COUPLING. As far back as 1994, when the Gang of Four wrote DESIGN PATTERNS, this was already a common knowledge:
 'Program to an interface, not an implementation'
 This important piece of advice isn't the conclusion, but, rather, the premise of 'Design Patterns'. Loose coupling makes code extensible, and extensibility makes it maintainable. DI is nothing more than a technique that enables loose coupling. Moreover, there are many misconceptions about DI, and sometimes they get in the way of proper understanding. Before you can learn, you must UNLEARN what (you think) you already know. 
+
+## Unit Testing
+Some people think that DI is only relevant for supporting unit testing. This isn't true, either, although DI is certiainly an important part of support for unit testing. 
+
+## An Abstract Factory On Steroids
+Perhaps the most dangeerous fallacy is that DI involves some sort of general-purpose Abstract FActory that you can use to create instances of the DEPENDENCIES needed in your applicacions. 
+
+Abstract Factory -> This is typically an ABSTRACTION that contains multiple methods, where each method allows the creation of an object of a certain kind. 
+
+Many developers and architects think about DI as a service that can be used to locate other services. This is called a SERVICE LOCATOR, but it's the exact opposite of DI. 
+A SERVICE LOCATOR is often called an Abstract Factory on steroids because, compared to a normal Abstract Factory, the list of resolvable types is unspecified and possible endless. 
+
+## DI CONTAINERS
+Closely associated with the previous misconception is the notion that DI requires a DI CONTAINER. If you held the previous, mistaken belief that DI involves a SERVICE LOCATOR, then it's easy to conclude that a DI CONTAINER can take on the responsibility of the SERVICE LOCATOR. This might be the case, but its not all how you should use a DI CONTAINER. 
+A DI CONTAINER is an 'optional' library that makes it easier to compose classes when you wire up an application, but it's in no way required. When you compose applications without a DI CONTAINER, it's called PURE DI. It might take a little more work, but other than that, you don't have to compromise on any DI principles. 
+
+
+
