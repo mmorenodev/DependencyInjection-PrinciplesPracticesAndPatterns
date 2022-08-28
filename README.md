@@ -64,6 +64,25 @@ It's amazing that the concept of a socket predates computers by decades, and yet
 The ability to switch plugs, or implementations, without requiring a change to the socket, or interface, is similar to a central software design principle called the LISKOV SUBSTITUTION PRINCIPLE. This principle states that we should be able to replace one implementation of an interface with another without breaking either the client or the implementation. 
 When it comes to DI, the LISKOV SUBSTITUTION PRINCIPLE is one of the most important software design principles. It's this principle that enables us to address requirements that occur in the future, even if we can't foresee them today. 
 
+There are many other things you can do, as well. If you live in a neighborhood with intermittent power failures, you may want to keep the computer running by plugging in into an uninterrupted power supply (UPS). As shown in the next image, you connect the UPS to the wall outlet and the computer to the UPS. 
+
+<img width="777" alt="image" src="https://user-images.githubusercontent.com/66931789/187051491-65473ad2-2c9d-4c39-b27a-f02ab83502c2.png">
+
+The computer and the UPS serve separate purposes. Each has a **SINGLE RESPONSIBILITY** that doesn't infringe on the other unit. The UPS and computer are likely to be produced by two different manufacturers, bought at different times, and plugged in separately. As the image above demonstrated, you can run the computer without a UPS, and you could also conceivably use the hair dryer during blackouts by plugging it into the UPS. 
+
+In software design, this way of INTERCEPTING one implementation with another implementation OF THE SAME INTERFACE IS KNOWN AS THE **DECORATOR** design pattern. It gives you the ability to incrementally introduce new features and CROSS-CUTTING CONCERNS without having to rewrite or change a lot of existing code. 
+Another way to add new functionality to an existing code base is to refactor an existing implementation of an interface with a new implementation. When you aggregate several implementations into one, you use the COMPOSITE design pattern. 
+
+You sometimes find yourself in situations where a plug doesn't fit into a particular socket. If you've traveled to another country, you've likely noticed that sockets differ across the world. If you bring something like the camera in the next image you will need an adapter to charge it. Appropriately, there's a design pattern with the same name. 
+
+<img width="802" alt="image" src="https://user-images.githubusercontent.com/66931789/187051728-135ac2d1-bfda-4e4e-8ff2-a6d13c23b07b.png">
+
+The advantage of loose coupling is the same in software design as it is in the physical socket and plug model: once the infrastructure is inplace, it can be used by anyone and adapted to changing needs and unforeseen requirements without requiring large changes to the application code base and infrastructure. This means that ideally, a new requirement should only necessitate the addition of a new class, with no changes to other already-existing classes of the system. 
+This concept of being **able to extend an application without modifying existing code is called the OPEN/CLOSED PRINCIPLE.** It's impossible to get to a situation where 100% of your code will always be OPEN for extensibility and CLOSED for modification. Still, loose coupling does bring you closer to that goal. 
+
+
+
+
 
 
 
